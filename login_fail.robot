@@ -5,7 +5,10 @@ Resource          common_variables.robot
 Library         Selenium2Library
 
 Suite Setup         Open browser POS
-Test Teardown       Reload Page
+
+Test Teardown       Clear data in text box
+
+Suite Teardown      Close All Browsers
 
 
 *** Variable ***
@@ -37,4 +40,3 @@ Fill in password incorrect
     Click login button
     Should show error message ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง
 
-#test edit file
